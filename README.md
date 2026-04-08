@@ -63,6 +63,32 @@ npm run dev
 - **Frontend**: [http://localhost:5173](http://localhost:5173)
 - **Backend API**: [http://localhost:3001](http://localhost:3001)
 
+## 🐳 Deployment (Docker)
+
+This project is production-ready and can be deployed using Docker. We use a multi-stage build to keep the image lightweight and high-performance.
+
+### Using Docker Compose (Recommended)
+
+To build and start the application in a single command:
+
+```bash
+docker compose up --build
+```
+
+### Manual Docker Build
+
+If you prefer to build the image manually:
+
+```bash
+# Build the image
+docker build -t async-worker-dashboard .
+
+# Run the container
+docker run -p 3001:3001 async-worker-dashboard
+```
+
+Once running, the application will be accessible at [http://localhost:3001](http://localhost:3001) (both API and Frontend).
+
 ## 📂 Project Structure
 
 ```text
