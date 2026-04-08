@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: async-worker-dashboard
+    env: docker
+    plan: free
+    healthCheckPath: /api/jobs
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3001
+    ports:
+      - port: 3001
+        protocol: tcp

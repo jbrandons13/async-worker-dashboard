@@ -91,6 +91,14 @@ docker run -p 3001:3001 async-worker-dashboard
 
 Once running, the application will be accessible at [http://localhost:3001](http://localhost:3001) (both API and Frontend).
 
+### Using Render Blueprints (Infrastructure as Code)
+
+This project includes a `render.yaml` file for automated, one-click deployments.
+
+1. Connect your GitHub repository to [Render](https://render.com/).
+2. Render will automatically detect the `render.yaml` file.
+3. Click **Apply** and your dashboard will be deployed on a free `web` service.
+
 ## 📂 Project Structure
 
 ```text
