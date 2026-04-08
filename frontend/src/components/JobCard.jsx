@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Loader2, CheckCircle2, AlertCircle, Clock } from 'lucide-react';
 
