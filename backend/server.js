@@ -1,7 +1,12 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { taskQueue } from './queue/taskQueue.js';
 import { workerManager } from './worker/workerManager.js';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 3001;
@@ -53,6 +58,19 @@ app.get('/api/jobs/stream', (req, res) => {
   req.on('close', () => {
     taskQueue.off('change', sendUpdate);
   });
+});
+
+// Serve static files from the React app build in production
+const distPath = path.join(__dirname, '../frontend/dist');
+app.use(express.static(distPath));
+
+// Handle React routing, return all requests to React app
+app.get('*', (req, res, next) => {
+  // Allow API and SSE routes to pass through
+  if (req.path.startsWith('/api')) {
+    return next();
+  }
+  res.sendFile(path.join(distPath, 'index.html'));
 });
 
 app.listen(PORT, () => {
