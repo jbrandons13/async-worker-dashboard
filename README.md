@@ -1,10 +1,11 @@
 # 🚀 Distributed Task Queue & Worker Visualizer
 
+[![Live Demo](https://img.shields.io/badge/demo-live-success?style=for-the-badge&logo=render&logoColor=white)](https://async-worker-dashboard.onrender.com)
 [![CI Pipeline](https://github.com/jbrandons13/async-worker-dashboard/actions/workflows/ci.yml/badge.svg)](https://github.com/jbrandons13/async-worker-dashboard/actions/workflows/ci.yml)
 
 A robust, non-blocking background processing system with a real-time "Cyberpunk Terminal" monitoring dashboard. Built with Node.js **Worker Threads**, **SSE (Server-Sent Events)**, and **React + Tailwind CSS v4**.
 
-![Cyberpunk Dashboard Preview](https://raw.githubusercontent.com/jbrandons13/async-worker-dashboard/main/frontend/src/assets/hero.png) *(Note: Add your actual screenshot path here or rely on the live preview)*
+![Cyberpunk Dashboard Preview](./frontend/src/assets/hero.png)
 
 ## 🛠️ Tech Stack
 
