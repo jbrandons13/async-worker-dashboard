@@ -11,6 +11,3 @@ services:
         value: production
       - key: PORT
         value: 3001
-    ports:
-      - port: 3001
-        protocol: tcp
