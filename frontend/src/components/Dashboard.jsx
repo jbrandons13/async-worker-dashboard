@@ -1,6 +1,5 @@
-import React from 'react';
 import { JobCard } from './JobCard';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 
 export const Dashboard = ({ jobs }) => {
   if (jobs.length === 0) {
